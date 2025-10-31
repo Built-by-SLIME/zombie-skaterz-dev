@@ -260,7 +260,6 @@ npm run db:push
 ### Future Features
 - New character skins and customizations
 - Additional game modes and levels
-- Multiplayer Mode: Compete with other players in real-time
 - Achievement System: Unlock rewards for gameplay milestones
 - Expanded Enemy Types: More enemy varieties with unique behaviors
 - Environmental Hazards: Additional obstacle types and patterns
