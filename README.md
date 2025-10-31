@@ -20,7 +20,7 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 
 ## ⚙️ Hedera Integrations
 
-### 1. Transaction Types Used ###
+### Transaction Types Used ###
 
 **Client-Side (Wallet-Signed):**
 - `TokenAssociateTransaction` - Associate STAR token with player wallet before receiving rewards
@@ -38,7 +38,7 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 
 ---
 
-### 2. Architecture Diagram ###
+### Architecture Diagram ###
 
 ```
 ┌─────────────────────────────────────────────────────────────────────┐
@@ -108,7 +108,7 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 
 ---
 
-### 3. Deployed Hedera IDs (Mainnet)
+### Deployed Hedera IDs (Mainnet)
 
 | Resource | Hedera ID | Purpose |
 |----------|-----------|---------|
