@@ -18,6 +18,107 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 - **Leaderboard System**: Database-backed high score tracking with automatic submission
 - **Dynamic Soundtrack**: Alternating background music tracks with on-screen artist credits
 
+### 🔗 Hedera Hashgraph Integration
+
+### 1. Transaction Types Used ###
+
+**Client-Side (Wallet-Signed):**
+- `TokenAssociateTransaction` - Associate STAR token with player wallet before receiving rewards
+- `TransferTransaction` - Token transfers (client-side wallet operations)
+- `AccountBalanceQuery` - Check player's token balances
+- `AccountInfoQuery` - Retrieve account information and token associations
+- `TokenNftInfoQuery` - Verify NFT ownership for character unlocks
+
+**Server-Side (Treasury-Signed):**
+- `TransferTransaction` - Distribute STAR token rewards from treasury to players
+- `TokenInfoQuery` - Query STAR token metadata (decimals) for accurate transfers
+
+**Mirror Node API:**
+- REST API calls to verify token associations and account state
+
+---
+
+### 2. Architecture Diagram ###
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                         ZOMBIE SKATERZ                              │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌──────────────────┐         ┌──────────────────┐         ┌──────────────────┐
+│                  │         │                  │         │                  │
+│   FRONTEND       │         │   BACKEND        │         │   HEDERA         │
+│   (React +       │         │   (Express.js)   │         │   MAINNET        │
+│    Phaser)       │         │                  │         │                  │
+│                  │         │                  │         │                  │
+└──────────────────┘         └──────────────────┘         └──────────────────┘
+        │                            │                            │
+        │  1. Wallet Connect         │                            │
+        │  (HashPack/Blade)          │                            │
+        │◄───────────────────────────┼────────────────────────────┤
+        │  DAppConnector             │                            │
+        │                            │                            │
+        │  2. Check Token            │                            │
+        │  Association               │                            │
+        │────────────────────────────┼───────────────────────────►│
+        │                            │  Mirror Node API           │
+        │◄───────────────────────────┼────────────────────────────┤
+        │  (Association Status)      │                            │
+        │                            │                            │
+        │  3. Associate Token        │                            │
+        │  (if needed)               │                            │
+        │────────────────────────────┼───────────────────────────►│
+        │  TokenAssociateTransaction │  Wallet signs & submits    │
+        │◄───────────────────────────┼────────────────────────────┤
+        │  (Receipt)                 │                            │
+        │                            │                            │
+        │  4. Claim Rewards          │                            │
+        │  POST /api/rewards/claim   │                            │
+        ├───────────────────────────►│                            │
+        │  {accountId, amount}       │                            │
+        │                            │  5. Query Token Info       │
+        │                            ├───────────────────────────►│
+        │                            │  TokenInfoQuery            │
+        │                            │◄───────────────────────────┤
+        │                            │  (Decimals)                │
+        │                            │                            │
+        │                            │  6. Send STAR Tokens       │
+        │                            ├───────────────────────────►│
+        │                            │  TransferTransaction       │
+        │                            │  (Treasury → Player)       │
+        │                            │◄───────────────────────────┤
+        │  7. Success Response       │  (Transaction Receipt)     │
+        │◄───────────────────────────┤                            │
+        │  {transactionId}           │                            │
+        │                            │                            │
+        │  8. Check NFT Ownership    │                            │
+        │  (Character Unlocks)       │                            │
+        │────────────────────────────┼───────────────────────────►│
+        │  TokenNftInfoQuery         │                            │
+        │◄───────────────────────────┼────────────────────────────┤
+        │  (NFT Metadata)            │                            │
+        │                            │                            │
+```
+
+**Data Flow Summary:**
+- **Frontend → Hedera:** Wallet connection, token association, NFT queries (via WalletConnect)
+- **Frontend → Backend:** Reward claim requests (REST API)
+- **Backend → Hedera:** Token distribution from treasury (server-signed transactions)
+- **Hedera → Frontend/Backend:** Transaction receipts, Mirror Node data
+
+---
+
+### 3. Deployed Hedera IDs (Mainnet)
+
+| Resource | Hedera ID | Purpose |
+|----------|-----------|---------|
+| **STAR Token (HTS)** | `0.0.9243537` | Play-to-earn reward token (1 STAR per in-game star collected) |
+| **Unlock NFT (HTS NFT)** | `0.0.9963841` | Character unlock token (Serial #2 unlocks special character) |
+| **Treasury Account** | `0.0.9972684` | Operator account that distributes STAR token rewards to players |
+
+**Network:** Hedera Mainnet  
+**Wallet Support:** HashPack, Blade Wallet (via WalletConnect)
+
 ## 🛠 Tech Stack
 
 ### Frontend
@@ -39,9 +140,6 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 - **Audio**: Howler.js 2.2.4 for sound effects and music
 - **Input**: Unified keyboard, mouse, and touch controls
 
-### Blockchain Ready (Configured)
-- **Hedera Network**: Ready for NFT integration and decentralized features
-- **HashPack Wallet**: Wallet connection capability for future features
 
 ## 🔧 Development Setup
 
@@ -140,11 +238,6 @@ npm run db:push
 - **Combo Multipliers**: x3 to x10 multiplier for successful combo chains
 - **Star Bonuses**: Combos convert score points into bonus stars
 - **Leaderboard**: Automatic score submission as "Player 1"
-
-### Hedera Hashgraph Integration (Ready)
-- Hedera SDK integration points configured
-- HashPack wallet connection infrastructure
-- NFT and token integration capabilities
 
 ## 🔮 Current Features & Future Roadmap
 
