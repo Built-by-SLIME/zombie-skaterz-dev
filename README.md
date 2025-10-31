@@ -18,6 +18,8 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 - **Leaderboard System**: Database-backed high score tracking with automatic submission
 - **Dynamic Soundtrack**: Alternating background music tracks with on-screen artist credits
 
+## ⚙️ Hedera Integrations
+
 ### 1. Transaction Types Used ###
 
 **Client-Side (Wallet-Signed):**
