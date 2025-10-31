@@ -18,6 +18,50 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 - **Leaderboard System**: Database-backed high score tracking with automatic submission
 - **Dynamic Soundtrack**: Alternating background music tracks with on-screen artist credits
 
+## 🎯 Game Controls
+
+### Desktop
+- **Space** or **↑ Arrow**: Jump
+- **Space/↑ Again (in air)**: Double Jump (costs stamina)
+- **Mouse Click**: Jump
+- **J Key (while airborne)**: Perform trick for combo points
+
+### Mobile
+- **Tap Screen**: Jump
+- **Tap Again (in air)**: Double Jump (costs stamina)
+- **Swipe Up (while airborne)**: Perform trick for combo points
+
+## 🎨 Game Mechanics
+
+### Core Gameplay
+- **Objective**: Dodge obstacles, crush enemies, and collect $STAR tokens
+- **Progressive Difficulty**: Game speed increases as you score more points
+- **Survival Focus**: Manage health, stamina, and lives to achieve high scores
+
+### Combat & Movement
+- **Enemy Stomping**: Jump on enemies to defeat them and score points
+- **Double Jump**: Use stamina to perform a second jump in mid-air
+- **Aerial Tricks**: J key (desktop) or swipe up (mobile) while airborne to perform tricks
+- **Combo System**: Combine tricks and enemy kills (3+ actions) for bonus stars
+
+### Resource Management
+- **Health Bar**: Take damage from obstacles and enemies, restore with sandwiches
+- **Stamina Bar**: Required for double jumps and tricks, regenerates over time
+- **Life Counter**: Start with 3 lives, earn more at star milestones
+- **Star Economy**: Collect stars to unlock features and gain extra lives
+
+### Power-Ups & Items
+- **Sandwiches**: Restore 20 health points (with warning arrow indicator)
+- **Energy Drinks**: Full stamina restore, temporary invulnerability, and speed boost
+- **Single Stars**: Worth 1 star each with collection sound effect
+- **Star Clusters**: Worth 10 stars each with special sound effect
+
+### Scoring System
+- **Base Points**: 10 points per second survived, 50 points per enemy defeated
+- **Combo Multipliers**: x3 to x10 multiplier for successful combo chains
+- **Star Bonuses**: Combos convert score points into bonus stars
+- **Leaderboard**: Automatic score submission as "Player 1"
+
 ## ⚙️ Hedera Integrations
 
 ### Transaction Types Used ###
@@ -195,51 +239,7 @@ npm run check
 npm run db:push
 ```
 
-## 🎯 Game Controls
-
-### Desktop
-- **Space** or **↑ Arrow**: Jump
-- **Space/↑ Again (in air)**: Double Jump (costs stamina)
-- **Mouse Click**: Jump
-- **J Key (while airborne)**: Perform trick for combo points
-
-### Mobile
-- **Tap Screen**: Jump
-- **Tap Again (in air)**: Double Jump (costs stamina)
-- **Swipe Up (while airborne)**: Perform trick for combo points
-
-## 🎨 Game Mechanics
-
-### Core Gameplay
-- **Objective**: Dodge obstacles, crush enemies, and collect $STAR tokens
-- **Progressive Difficulty**: Game speed increases as you score more points
-- **Survival Focus**: Manage health, stamina, and lives to achieve high scores
-
-### Combat & Movement
-- **Enemy Stomping**: Jump on enemies to defeat them and score points
-- **Double Jump**: Use stamina to perform a second jump in mid-air
-- **Aerial Tricks**: J key (desktop) or swipe up (mobile) while airborne to perform tricks
-- **Combo System**: Combine tricks and enemy kills (3+ actions) for bonus stars
-
-### Resource Management
-- **Health Bar**: Take damage from obstacles and enemies, restore with sandwiches
-- **Stamina Bar**: Required for double jumps and tricks, regenerates over time
-- **Life Counter**: Start with 3 lives, earn more at star milestones
-- **Star Economy**: Collect stars to unlock features and gain extra lives
-
-### Power-Ups & Items
-- **Sandwiches**: Restore 20 health points (with warning arrow indicator)
-- **Energy Drinks**: Full stamina restore, temporary invulnerability, and speed boost
-- **Single Stars**: Worth 1 star each with collection sound effect
-- **Star Clusters**: Worth 10 stars each with special sound effect
-
-### Scoring System
-- **Base Points**: 10 points per second survived, 50 points per enemy defeated
-- **Combo Multipliers**: x3 to x10 multiplier for successful combo chains
-- **Star Bonuses**: Combos convert score points into bonus stars
-- **Leaderboard**: Automatic score submission as "Player 1"
-
-## 🔮 Current Features & Future Roadmap
+## 🧟 Features
 
 ### Fully Implemented
 - Dual playable characters (Kev and Stacy)
