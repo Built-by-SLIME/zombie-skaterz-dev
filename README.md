@@ -161,8 +161,8 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 | **Treasury Account** | `0.0.9972684` | Operator account that distributes STAR token rewards to players |
 
 **Network:** Hedera Mainnet  
-**Wallet Support:** HashPack (via WalletConnect)
-**Certificate:** https://drive.google.com/file/d/19vfoTznW8sEEs9H3sg9ZZg9GnlwqeF3_/view?usp=drivesdk
+**Wallet Support:** HashPack, Blade Wallet (via WalletConnect)  
+**Certificate:** https://drive.google.com/file/d/19vfoTznW8sEEs9H3sg9ZZg9GnlwqeF3_/view?usp=drivesdk  
 **Pitch Deck:** https://drive.google.com/file/d/10Qvg_FiaSHE3QexXVNfLrI_lTW5GfdSZ/view?usp=drivesdk
 
 ## 🛠 Tech Stack
