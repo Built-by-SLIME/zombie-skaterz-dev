@@ -18,8 +18,6 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 - **Leaderboard System**: Database-backed high score tracking with automatic submission
 - **Dynamic Soundtrack**: Alternating background music tracks with on-screen artist credits
 
-### 🔗 Hedera Hashgraph Integration
-
 ### 1. Transaction Types Used ###
 
 **Client-Side (Wallet-Signed):**
@@ -117,7 +115,7 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 | **Treasury Account** | `0.0.9972684` | Operator account that distributes STAR token rewards to players |
 
 **Network:** Hedera Mainnet  
-**Wallet Support:** HashPack, Blade Wallet (via WalletConnect)
+**Wallet Support:** HashPack (via WalletConnect)
 
 ## 🛠 Tech Stack
 
@@ -242,18 +240,18 @@ npm run db:push
 ## 🔮 Current Features & Future Roadmap
 
 ### Fully Implemented
-- ✅ Dual playable characters (Kev and Stacy)
-- ✅ Complete enemy system with stomping mechanics
-- ✅ Health and stamina systems with UI
-- ✅ Power-up system (sandwiches and energy drinks)
-- ✅ Star collection and life reward system
-- ✅ Combo system with multipliers
-- ✅ Progressive difficulty scaling
-- ✅ Full sound effects and alternating music tracks
-- ✅ PostgreSQL-backed leaderboard
-- ✅ Tutorial and How to Play screens
-- ✅ Character selection screen
-- ✅ Splash screen sequence
+- Dual playable characters (Kev and Stacy)
+- Complete enemy system with stomping mechanics
+- Health and stamina systems with UI
+- Power-up system (sandwiches and energy drinks)
+- Star collection and life reward system
+- Combo system with multipliers
+- Progressive difficulty scaling
+- Full sound effects and alternating music tracks
+- PostgreSQL-backed leaderboard
+- Tutorial and How to Play screens
+- Character selection screen
+- Splash screen sequence
 
 ### Future Features
 - New character skins and customizations
@@ -262,14 +260,6 @@ npm run db:push
 - Achievement System: Unlock rewards for gameplay milestones
 - Expanded Enemy Types: More enemy varieties with unique behaviors
 - Environmental Hazards: Additional obstacle types and patterns
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit changes (`git commit -m 'Add amazing feature'`)
-4. Push to branch (`git push origin feature/amazing-feature`)
-5. Open Pull Request
 
 ---
 
