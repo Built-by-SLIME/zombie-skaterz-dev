@@ -162,6 +162,8 @@ A retro-styled 2D endless runner game featuring a skateboarding zombie character
 
 **Network:** Hedera Mainnet  
 **Wallet Support:** HashPack (via WalletConnect)
+**Certificate:** https://drive.google.com/file/d/19vfoTznW8sEEs9H3sg9ZZg9GnlwqeF3_/view?usp=drivesdk
+**Pitch Deck:** https://drive.google.com/file/d/10Qvg_FiaSHE3QexXVNfLrI_lTW5GfdSZ/view?usp=drivesdk
 
 ## 🛠 Tech Stack
 
